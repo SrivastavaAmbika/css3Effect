@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+   
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    
+        body {
+            font-size: 16px;
+            line-height: 22px;
+            color: #555;
+             background-image: url(https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);    
+            font-weight: 300;
+            text-shadow: rgba(0,0,0,.01) 0 0 1px;
+            font-family: 'Roboto Condensed', sans-serif;
+            overflow-x: hidden;
+            background-size: cover;
+            
+        }
+         
+        #section-id ul {
+            margin: 100px 0 0 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+        }
+        
+        #section-id li {
+            
+            box-sizing: border-box;
+            position: relative;
+            height: 380px;
+            padding: 2%;
+            /* float: left; */
+            margin-bottom: 40px;     
+            user-select: none;
+        }
+        
+        #section-id .wrap {
+            background-repeat: no-repeat;
+            position: absolute;
+            max-width: 280px;
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            margin-left: -140px;
+            top: 0;    
+            perspective: 600px;
+            cursor: pointer;
+            
+        }
+        
+        .md-left,
+        .md-right,
+        .md-left-full,
+        .md-right-full {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;     
+            transition: all .5s;
+            overflow: hidden;
+        }
+        
+        .icon1 {
+            position: absolute;
+            top: 90px;
+            text-align: center;
+            width: 100%;
+            left: 0;
+            width: 200%;
+            color: #fb527a;
+        }
+        
+        
+        .md-left-full .icon1,
+        .md-right-full .icon1 {
+            color: #fff;
+        }
+        
+        .md-right,
+        .md-right-full {
+            left: auto;
+            right: 0;
+        }
+        
+        .md-left-full,
+        .md-right-full {
+            background-color: #fb527a;
+            z-index: 9;
+            color: #fff;
+        }
+        
+        .wrap a {
+            color: #fff;
+            text-decoration: none;
+            margin-top: 110px;
+        }
+        
+        .md-left,
+        .md-right {
+            background-color: #fff;
+            z-index: 10;
+        }
+        
+        .wrap > .md-right-full,
+        .wrap > .md-right {
+            background-position: right -30px;
+        }
+        
+        .wrap > .md-right,
+        .wrap > .md-left-full {     
+        
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform-origin: 0 0;
+            transform: rotateY(0deg);
+        }
+        
+        .wrap.hover > .md-right {     
+            transform: rotateY(-45deg);
+            background-color: #ececec;
+        }
+        
+        .wrap > .md-left-full {     
+            transform-origin: 100% 0;     
+            transform: rotateY(180deg);
+        }
+        
+        .wrap.active > .md-right,
+        .wrap.hover.active > .md-right {     
+            transform: rotateY(-180deg);
+        }
+        
+        .wrap.active > .md-left-full {     
+            transform: rotateY(0deg);
+        }
+        
+        .active .md-left-full,
+        .active .md-right-full {
+            z-index: 11;
+        }
+        
+        .wrap div h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 22px;
+             
+        }
+        
+        .wrap div h3,
+        .wrap div p {
+            width: 200%;
+            position: absolute;
+            text-align: center;
+            left: 0;
+            top: 190px;
+        }
+        
+        .wrap div p {
+            padding: 0 10%;
+            line-height: 18px;
+            font-size: 14px;
+            top: 180px;
+        }
+        
+        .wrap div.md-right h3,
+        .wrap div.md-right-full h3,
+        .wrap div.md-right p,
+        .wrap div.md-right-full p,
+        .md-right .icon1,
+        .md-right-full .icon1
+        {
+            left: auto;
+            right: 0;
+        }
+        
+        .wrap div.md-left-full h3,
+        .wrap div.md-right-full h3 {
+            top: 175px;
+        }
+            
+            p{
+                margin-top: 55px;
+            } 
+            
+            a{
+                margin-top: 50px;
+            }
+            
+            
+        </style>
+        
+</head>
+<body>
+    <section id="section-id" class="container">
+<div class="row">
+    <ul>
+        <li class="col-md-3 col-sm-6" id="innovation">
+<div class="wrap">
+    <div class="md-left">
+        <div class="icon1">
+                <i class="fa fa-bath" aria-hidden="true"></i>
+        </div>
+        <h3>Responsive</h3>
+    </div>
+    <div class="md-right">
+            <div class="icon1">
+                    <i class="fa fa-bath" aria-hidden="true"></i>    
+            </div>
+            <h3>Responsive</h3>
+        </div>
+        <div class="md-left-full">
+                <div class="icon1">
+                        <i class="fa fa-bath" aria-hidden="true"></i>
+                    </div>
+                    <h3>Responsive</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+        </div>
+        <div class="md-right-full">
+                <div class="icon1">
+                        <i class="fa fa-bath" aria-hidden="true"></i>
+                    </div>
+                <h3>Responsive</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+    
+        </div>
+</div>
+        </li>
+        <li class="col-md-3 col-sm-6" id="innovation">
+                <div class="wrap">
+                    <div class="md-left">
+                        <div class="icon1">
+                                <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <h3>Responsive</h3>
+                    </div>
+                    <div class="md-right">
+                            <div class="icon1">
+                                    <i class="fa fa-bath" aria-hidden="true"></i>    
+                            </div>
+                            <h3>Responsive</h3>
+                        </div>
+                        <div class="md-left-full">
+                                <div class="icon1">
+                                        <i class="fa fa-bath" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Responsive</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+                        </div>
+                        <div class="md-right-full">
+                                <div class="icon1">
+                                        <i class="fa fa-bath" aria-hidden="true"></i>
+                                    </div>
+                                <h3>Responsive</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+                    
+                        </div>
+                </div>
+                        </li>
+   
+                        <li class="col-md-3 col-sm-6" id="innovation">
+                                <div class="wrap">
+                                    <div class="md-left">
+                                        <div class="icon1">
+                                                <i class="fa fa-bath" aria-hidden="true"></i>
+                                        </div>
+                                        <h3>Responsive</h3>
+                                    </div>
+                                    <div class="md-right">
+                                            <div class="icon1">
+                                                    <i class="fa fa-bath" aria-hidden="true"></i>    
+                                            </div>
+                                            <h3>Responsive</h3>
+                                        </div>
+                                        <div class="md-left-full">
+                                                <div class="icon1">
+                                                        <i class="fa fa-bath" aria-hidden="true"></i>
+                                                    </div>
+                                                    <h3>Responsive</h3>
+                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+                                        </div>
+                                        <div class="md-right-full">
+                                                <div class="icon1">
+                                                        <i class="fa fa-bath" aria-hidden="true"></i>
+                                                    </div>
+                                                <h3>Responsive</h3>
+                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+                                    
+                                        </div>
+                                </div>
+                                        </li>
+   
+                                        <li class="col-md-3 col-sm-6" id="innovation">
+                                                <div class="wrap">
+                                                    <div class="md-left">
+                                                        <div class="icon1">
+                                                                <i class="fa fa-bath" aria-hidden="true"></i>
+                                                        </div>
+                                                        <h3>Responsive</h3>
+                                                    </div>
+                                                    <div class="md-right">
+                                                            <div class="icon1">
+                                                                    <i class="fa fa-bath" aria-hidden="true"></i>    
+                                                            </div>
+                                                            <h3>Responsive</h3>
+                                                        </div>
+                                                        <div class="md-left-full">
+                                                                <div class="icon1">
+                                                                        <i class="fa fa-bath" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <h3>Responsive</h3>
+                                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+                                                        </div>
+                                                        <div class="md-right-full">
+                                                                <div class="icon1">
+                                                                        <i class="fa fa-bath" aria-hidden="true"></i>
+                                                                    </div>
+                                                                <h3>Responsive</h3>
+                                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sed inventore natus nobis enim reiciendis magni, incidunt nulla iste minus aliquam non cupiditate vero blanditiis deleniti, ratione voluptas? Asperiores, eius.</p>
+                                                    
+                                                        </div>
+                                                </div>
+                                                        </li>
+                                                   
+    </ul>
+</div>
+    </section>
+    <script>
+            $(function () {
+            $('#section-id .wrap')
+                .hover(function() {
+                    $(this).addClass('hover');
+                }, function() {
+                    $(this).removeClass('hover');
+                })
+                .click(function(event) {
+                    //if (event.target.nodeName != 'A') {
+                        $(this).toggleClass('active');
+                    //}
+                });
+        });
+            
+        </script>
+        
+</body>
+</html>
